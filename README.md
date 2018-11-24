@@ -1,6 +1,7 @@
 # speech-reminder
 
 **Developed by:**  
+
 | Name | NIM |
 | ---- | --- |
 | Vincent Hendryanto Halim | 13515089 |
