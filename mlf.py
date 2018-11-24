@@ -14,7 +14,7 @@ list = listFiles("/dataset")
 filesList = list["files"]
 
 files = open("words.mlf", "w+")
-
+files.write('#!MLF!#\n')
 for file in filesList:
 	files.write('"*/'+file.split(".")[0]+'.lab"'+"\n")
 	name_split = file.split('_')
