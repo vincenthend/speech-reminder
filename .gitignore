@@ -1,4 +1,4 @@
-log.txt
-stats.txt
-wdnet
-dict_used
+logs/*
+generated/*
+hmms/*
+train/mfcc/*

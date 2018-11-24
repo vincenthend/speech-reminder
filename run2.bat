@@ -1,1 +1,0 @@
-HCompV -A -D -T 1 -C config -f 0.01 -m -S train.scp -M hmm0 proto
