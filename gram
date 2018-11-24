@@ -1,10 +1,10 @@
-$s = TUGAS $entity $time | $question TUGAS $entity | $time ADA TUGAS APA;
-$time = $no $tunit LAGI | $tref | $day $td | $tunit $td2;
 $entity = NLP | ML | PAT | PENGCIT | RPLBS | TBD | RPP | SIL | PDL | RPLSD | TA | KP;
 $day = MINGGU | SENIN | SELASA | RABU | KAMIS | JUMAT | SABTU;
 $tref = BESOK | LUSA;
 $tunit = HARI | MINGGU | BULAN;
-$td = $td2 | DEPAN;
 $td2 = INI;
+$td = $td2 | DEPAN;
 $no = SATU | DUA | TIGA | EMPAT | LIMA | ENAM | TUJUH;
 $question = KAPAN;
+$time = $no $tunit LAGI | $tref | $day $td | $tunit $td2;
+( SENT-START (TUGAS $entity $time | $question TUGAS $entity | $time ADA TUGAS APA) SENT-END )
