@@ -1,8 +1,8 @@
-transcript_f = open("test/testprompts", "r")
+transcript_f = open("train/ctrainprompts", "r")
 transcript_arr = transcript_f.readlines()
 transcript_f.close()
 
-files = open("generated/open_test_transcript.mlf", "w")
+files = open("generated/closed_test_transcript.mlf", "w")
 files.write('#!MLF!#\n')
 for transcript in transcript_arr:
     t = transcript.split(' ')

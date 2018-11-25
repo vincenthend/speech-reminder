@@ -13,8 +13,8 @@ def listFiles(relativePath):
 list = listFiles("/train/dataset")
 filesList = list["files"]
 
-file1 = open("generated/codetrain.scp", "w+")
-file2 = open("generated/train.scp", "w+")
+file1 = open("generated/open_train_codetrain.scp", "w+")
+file2 = open("generated/open_train_train.scp", "w+")
 
 for file in filesList:
 	file1.write('train/dataset/'+file.split(".")[0]+'.wav train/mfcc/'+file.split(".")[0]+".mfc\n")

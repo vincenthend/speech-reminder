@@ -15,15 +15,15 @@ rem create monophones file with silence
 py scripts/monophones0.py
 
 rem create mlf file containing transcript of wav files, and generate label with led script
-py scripts/mlf.py
-HLEd -A -D -T 1 -l * -d generated/dict_used -i generated/phones/phones0.mlf train/mkphones0.led generated/words.mlf
-HLEd -A -D -T 1 -l * -d generated/dict_used -i generated/phones/phones1.mlf train/mkphones1.led generated/words.mlf
+py scripts/train_transcript.py
+HLEd -A -D -T 1 -l * -d generated/dict_used -i generated/phones/phones0.mlf train/mkphones0.led generated/open_train_transcript.mlf.mlf
+HLEd -A -D -T 1 -l * -d generated/dict_used -i generated/phones/phones1.mlf train/mkphones1.led generated/open_train_transcript.mlf.mlf
 
-py scripts/scp.py
-HCopy -A -D -T 1 -C configurations/wav_config -S generated/codetrain.scp
+py scripts/train_scp.py
+HCopy -A -D -T 1 -C configurations/wav_config -S generated/open_train_codetrain.scp
 mkdir hmms
 mkdir hmms\hmm0
-HCompV -A -D -T 1 -C configurations/config -f 0.01 -m -S generated/train.scp -M hmms/hmm0 train/proto
+HCompV -A -D -T 1 -C configurations/config -f 0.01 -m -S generated/open_train_train.scp -M hmms/hmm0 train/proto
 py scripts/hmmdefs.py
 py scripts/macros.py
 mkdir hmms\hmm1
