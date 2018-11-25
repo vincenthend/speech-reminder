@@ -70,3 +70,10 @@ mkdir hmms\hmm15
 HHEd -A -D -T 1 -H hmms/hmm12/macros -H hmms/hmm12/hmmdefs -M hmms/hmm13 generated/tree.hed generated/triphones1
 HERest  -A -D -T 1 -C configurations/config -I generated/wintri.mlf -t 250.0 150.0 3000.0 -S generated/train.scp -H hmms/hmm13/macros -H hmms/hmm13/hmmdefs -M hmms/hmm14 generated/tiedlist
 HERest  -A -D -T 1 -C configurations/config -I generated/wintri.mlf -t 250.0 150.0 3000.0 -S generated/train.scp -H hmms/hmm14/macros -H hmms/hmm14/hmmdefs -M hmms/hmm15 generated/tiedlist
+
+
+rem testing
+REM HSGen -l -n 200 generated/wdnet generated/dict_used > generated/testprompts
+REM py scripts/testrefmlf.py
+REM HVite -A -D -T 1 -H hmms/hmm15/macros -H hmms/hmm15/hmmdefs -S test.scp -l '*' -i generated/recout.mlf -w generated/wdnet -p 0.0 -s 5.0 generated/dict_used generated/tiedlist
+REM HResults -I generated/testref.mlf generated/tiedlist generated/recout.mlf
