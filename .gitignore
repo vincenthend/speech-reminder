@@ -2,3 +2,4 @@ logs/*
 generated/*
 hmms/*
 train/mfcc/*
+test/mfcc/*
