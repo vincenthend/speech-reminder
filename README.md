@@ -10,4 +10,5 @@
 | David Theosaksomo | 13515131 |
 
 ## How to Run
-Execute `run.bat` file via `Command Prompt` (Step 1 - 8 Monophones)
+Execute `run.bat` file via `Command Prompt` to train dataset.
+Execute `test.bat` file to test the system using test dataset.
