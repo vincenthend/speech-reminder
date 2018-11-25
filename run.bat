@@ -71,19 +71,3 @@ mkdir hmms\hmm15
 HHEd -A -D -T 1 -H hmms/hmm12/macros -H hmms/hmm12/hmmdefs -M hmms/hmm13 generated/tree.hed generated/triphones1
 HERest  -A -D -T 1 -C configurations/config -I generated/wintri.mlf -t 250.0 150.0 3000.0 -S generated/train.scp -H hmms/hmm13/macros -H hmms/hmm13/hmmdefs -M hmms/hmm14 generated/tiedlist
 HERest  -A -D -T 1 -C configurations/config -I generated/wintri.mlf -t 250.0 150.0 3000.0 -S generated/train.scp -H hmms/hmm14/macros -H hmms/hmm14/hmmdefs -M hmms/hmm15 generated/tiedlist
-
-TIMEOUT /T 5
-cls
-echo ========================================================
-echo "                   Closed Testing                     "
-echo ========================================================
-HVite -A -D -T 1 -C configurations/config -H hmms/hmm15/macros -H hmms/hmm15/hmmdefs -S generated/train.scp -l '*' -i generated/closed_test_result.mlf -w generated/wdnet -p 0.0 -s 5.0 generated/dict_used generated/tiedlist
-HResults -I generated/words.mlf generated/tiedlist generated/closed_test_result.mlf
-
-rem testing, generate words, create transcript, create list of codefiles, mfcc, viterby, cek result
-REM HSGen -l -n 200 generated/wdnet generated/dict_used > generated/testprompts
-REM py scripts/testing_transcript.py
-REM py scripts/testing_scp.py
-REM HCopy -A -D -T 1 -C configurations/wav_config -S generated/open_test_codetrain.scp
-REM HVite -A -D -T 1 -C configurations/config -H hmms/hmm15/macros -H hmms/hmm15/hmmdefs -S open_test_train.scp -l '*' -i generated/open_test_result.mlf -w generated/wdnet -p 0.0 -s 5.0 generated/dict_used generated/tiedlist
-REM HResults -I generated/open_test_transcript.mlf generated/tiedlist generated/open_test_result.mlf
