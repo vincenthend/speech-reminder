@@ -1,8 +1,8 @@
 ====================== HTK Results Analysis =======================
-  Date: Sun Nov 25 18:39:46 2018
+  Date: Sun Nov 25 18:50:08 2018
   Ref : generated/closed_test_transcript.mlf
   Rec : generated/closed_test_result.mlf
 ------------------------ Overall Results --------------------------
-SENT: %Correct=0.00 [H=0, S=75, N=75]
-WORD: %Corr=77.57, Acc=44.33 [H=294, D=6, S=79, I=126, N=379]
+SENT: %Correct=69.33 [H=52, S=23, N=75]
+WORD: %Corr=94.52, Acc=94.52 [H=500, D=4, S=25, I=0, N=529]
 ===================================================================
